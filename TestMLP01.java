@@ -8,13 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Exam.PageURLs;
 
 public class TestMLP01 extends Base {
-
 	WebDriver driver;
 	private MainLoginPage mainLoginPage;
 
@@ -28,7 +26,7 @@ public class TestMLP01 extends Base {
 	}
 
 	@Test
-	public void MLP001() {
+	public void MLP001() throws Exception{
 		this.mainLoginPage.clickLogoHTEC();
 		this.mainLoginPage.waitPageLoaded();
 		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
